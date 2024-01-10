@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = "authentication.User"
 
 # Application definition
 
@@ -40,7 +41,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # third party apps
     "rest_framework",
-    "otp",
+    # 'otp',
+    'django_otp',
+    'django_otp.plugins.otp_totp',
 
     # my apps
     "authentication",
